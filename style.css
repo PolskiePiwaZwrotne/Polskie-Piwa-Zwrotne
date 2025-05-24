@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+  margin: 0; font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(270deg, #5e3a87, #7b4fbc, #422d6e, #6e4ca3);
+  background-size: 800% 800%; animation: waveBackground 25s ease infinite;
+  color: #e0d9f3; min-height: 100vh; display: flex; flex-direction: column; user-select: none;
+}
+@keyframes waveBackground {
+  0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%}
+}
+header {
+  background: rgba(81,44,134,0.85);
+  padding: 22px 15px;
+  text-align: center;
+  color: #dcd6f7;
+  box-shadow: 0 4px 14px rgba(94,58,135,0.8);
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  text-shadow: 0 0 8px #371e69;
+  position: relative;
+}
+header h1 {
+  margin: 0; font-weight: 800; font-size: 2.6rem; letter-spacing: 1.6px;
+}
+#visitCounter {
+  position: absolute; top: 12px; right: 18px;
+  background: rgba(169,142,240,0.85);
+  padding: 6px 14px;
+  font-size: 1rem; font-weight: 700;
+  border-radius: 18px;
+  box-shadow: 0 0 12px #b492f9;
+  color: #2b1e5b;
+  user-select: none; cursor: default;
+  transition: transform 0.3s ease;
+}
+#visitCounter.animate {
+  transform: scale(1.25);
+  box-shadow: 0 0 28px #d4bfff;
+}
+.container {
+  max-width: 1300px; margin: 30px auto 50px; padding: 0 20px; flex-grow: 1;
+}
+.search-bar {
+  display: flex; justify-content: center; gap: 22px; margin-bottom: 38px; flex-wrap: wrap;
+}
+.search-bar input[type="text"] {
+  padding: 14px 22px;
+  font-size: 1.15rem;
+  border-radius: 32px;
+  border: 2.5px solid #9b81d6;
+  width: 320px;
+  outline-offset: 3px;
+  background: #c8bff766;
+  color: #3b2662;
+  font-weight: 600;
+  transition: border-color 0.35s ease, background-color 0.35s ease;
+}
+.search-bar input[type="text"]::placeholder {
+  color: #6a519eaa;
+  font-weight: 500;
+}
+.search-bar input[type="text"]:focus {
+  border-color: #5f3fa3;
+  background: #b2a8d9cc;
+  color: #2a1f48;
+}
+.search-bar label {
+  font-weight: 700;
+  color: #d4cffa;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+.search-bar input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #9a7fd2;
+}
+.brewery-section {
+  margin-bottom: 48px;
+}
+.brewery-section h2 {
+  border-bottom: 4px solid #a890d8;
+  padding-bottom: 9px;
+  margin-bottom: 24px;
+  font-weight: 900;
+  font-size: 2.1rem;
+  color: #d1c4f9;
+  text-shadow: 0 0 10px #4f357f;
+}
+.beer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 26px;
+}
+.beer-card {
+  background: rgba(255 255 255 / 0.17);
+  border-radius: 24px;
+  box-shadow: 0 10px 22px rgba(127, 85, 193, 0.45);
+  padding: 24px 18px;
+  text-align: center;
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+  cursor: default;
+  backdrop-filter: blur(10px);
+  border: 1.8px solid #b0a0d9cc;
+  user-select: none;
+}
+.beer-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 14px 32px rgba(138, 112, 225, 0.8);
+}
+.beer-card img {
+  width: 100%;
+  max-width: 120px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(127, 81, 255, 0.7);
+}
+.beer-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #ecd8ff;
+  text-shadow: 0 0 6px #9670c6;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(81,44,134,0.75);
+  color: #d4cffa;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  user-select: none;
+}
